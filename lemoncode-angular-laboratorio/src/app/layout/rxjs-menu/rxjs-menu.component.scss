@@ -1,0 +1,30 @@
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #752185;
+                font-size: 18px;
+                padding-bottom: 4px;
+                cursor: pointer;
+            }
+            .active {
+                border-bottom: 2px solid #752185;
+            }
+        }
+        .userName {
+            background-color: #752185;
+            border-radius: 4px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 4px;
+        }
+    }
+}

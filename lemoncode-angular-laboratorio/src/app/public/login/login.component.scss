@@ -1,0 +1,78 @@
+.login {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .help {
+        color: #4244a9;
+        border: 1px solid #bcbdec;
+        background-color: #dadbfa;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+    form {
+        width: 30%;
+        .form-element {
+            margin-bottom: 25px;
+            label {
+                display: inline-block;
+                max-width: 100%;
+                margin-bottom: 5px;
+                font-weight: 700;
+            }
+            input {
+                display: block;
+                width: 100%;
+                height: 34px;
+                padding: 6px 12px;
+                font-size: 14px;
+                line-height: 1.42857143;
+                color: #555;
+                background-color: #fff;
+                background-image: none;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .btn {
+                display: inline-block;
+                margin-bottom: 0;
+                font-weight: 400;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                background-image: none;
+                border: 1px solid transparent;
+                padding: 6px 12px;
+                font-size: 14px;
+                line-height: 1.42857143;
+                border-radius: 4px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                color: #fff;
+                background-color: #752185;
+                border-color: #681c77;
+            }
+            .error {
+                color: #a94442;
+                font-size: 12px;
+            }
+            .inputError {
+                border-color: #a94442;
+            }
+        }
+        .incorrectData {
+            color: #a94442;
+            background-color: #f2dede;
+            border: 1px solid #ebccd1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+    }
+}

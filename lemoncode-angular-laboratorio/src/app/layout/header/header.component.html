@@ -1,0 +1,9 @@
+<header>
+    <img src="assets/gfx/alexisLogo.png" alt="Alexis Logo">
+    <div class="menu">
+        <app-public-menu *ngIf="!loginService.isLogged() && !isLoging"></app-public-menu>
+        <app-private-menu *ngIf="loginService.isLogged()"></app-private-menu>
+        <app-rxjs-menu *ngIf="isLoging"></app-rxjs-menu>
+    </div>
+</header>
+

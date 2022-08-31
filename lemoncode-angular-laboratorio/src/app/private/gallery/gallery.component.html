@@ -1,0 +1,22 @@
+<div class="gallery">
+    <img class="select" [height]="imageSize" [src]="coversList[imageToShow].src" [alt]="coversList[imageToShow].name">
+
+    <div class="control">
+        <a (click)="back()" [ngClass]="{'disabled' : imageToShow === 0}"><i class="remix ri-arrow-left-s-line"></i></a>
+        <a (click)="next()" [ngClass]="{'disabled' : imageToShow === (coversList.length - 1)}"><i class="remix ri-arrow-right-s-line"></i></a>
+        <a (click)="increase()"><i class="remix ri-add-fill"></i></a>
+        <a (click)="diminish()"><i class="remix ri-subtract-line"></i></a>
+        <a (click)="playGallery()" *ngIf="!setInterval"><i class="remix ri-play-fill"></i></a>
+        <a (click)=" stopGallery()" *ngIf="setInterval"><i class="remix ri-pause-fill"></i></a>
+    </div>
+
+    <div class="list" >
+        <a (click)="backPage()" *ngIf="fistValue > 0"><i class="remix ri-arrow-left-s-line"></i></a>
+        <ng-container *ngFor="let cover of coversList | slice: fistValue:lastValue; let i = index">
+            <a (click)="showImage(i + fistValue)">
+                <img [ngClass]="{'miniSelect' : imageToShow === i + fistValue}" class="mini" [src]="cover.src" [alt]="cover.name">
+            </a>
+        </ng-container>
+        <a (click)="nextPage()" *ngIf="fistValue < 6"><i class="remix ri-arrow-right-s-line"></i></a>
+    </div>
+</div>

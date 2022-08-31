@@ -1,0 +1,25 @@
+<div class="login">
+    <h1>Login</h1>
+    <div class="help">
+        Username: Alexis <br>
+        Password: 123456  
+    </div>
+    <form name="form">
+        <div class="form-element">
+            <label for="username">Username</label>
+            <input [ngClass]="{'inputError' : hasErrors && errorFields.includes('user_name_empty') }" name="userName" type="text" [(ngModel)]="userName" (ngModelChange)="checkErrors()" >
+            <span class="error" *ngIf="hasErrors && errorFields.includes('user_name_empty')">Username is required</span>
+        </div>
+        <div class="form-element">
+            <label for="password">Password</label>
+            <input [ngClass]="{'inputError' : hasErrors && errorFields.includes('user_password_empty') }"  name="userPassword" type="password" [(ngModel)]="userPassword" (ngModelChange)="checkErrors()">
+            <span class="error" *ngIf="hasErrors && errorFields.includes('user_password_empty')">Password is required</span>
+        </div>
+        <div class="form-element">
+            <button class="btn" (click)="login()">Login</button>
+        </div>
+        <div *ngIf="loginError" class="incorrectData">
+            Username or password is incorrect  
+        </div>
+    </form>
+</div>

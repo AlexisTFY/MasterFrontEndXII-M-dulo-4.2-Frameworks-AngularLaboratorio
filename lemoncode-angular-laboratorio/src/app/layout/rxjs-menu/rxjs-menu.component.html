@@ -1,0 +1,10 @@
+<nav class="menu">
+    <ul>
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/profile" routerLinkActive="active">Profile</a></li>
+      <li><a routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
+      <li><a routerLink="/rotate" routerLinkActive="active">Rotate</a></li>
+      <li class="userName"><i class="ri-user-6-fill"></i> Hi! {{name}} </li>
+      <li><a (click)="logout()"> <i class="ri-logout-circle-r-line"></i> </a></li>
+    </ul>
+  </nav>
