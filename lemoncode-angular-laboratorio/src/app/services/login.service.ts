@@ -7,11 +7,18 @@ export class LoginService {
   validLogin: boolean = false;
   userName: string = '';
 
-  constructor() { }
+  constructor() {
+    const userName = localStorage.getItem('username')
+    if(userName) {
+      this.validLogin = true;
+      this.userName = userName;
+    }
+   }
 
   login(username: string, password: string): boolean {
     if (username === 'Alexis' && password === '123456') {
       this.validLogin = true;
+      localStorage.setItem('username', username);
       this.userName = username;
       return true;
     } else {
@@ -21,6 +28,7 @@ export class LoginService {
 
   logout() {
     this.validLogin = false;
+    localStorage.removeItem('username');
   }
 
   isLogged() {
